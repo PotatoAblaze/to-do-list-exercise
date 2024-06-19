@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="side-panel">
+            <div class="page-title">TO-DO LIST</div>
+            <ul class="side-panel-list">
+                <li class="side-panel-list-element" id="today"><button>Today</button></li>
+                <li class="side-panel-list-element" id="this-week"><button>This Week</button></li>
+                <li class="side-panel-list-element" id="all"><button>All</button></li>
+            </ul>
+            <ul class="side-panel-list">
+
+            </ul>
+        </div>
+        <div class="list-container">
+            <button type="button" class="add-new">
+                Add New +
+            </button>
+            <div class="list-display">
+                <div class="list-element">
+                    <div class="initial">
+                        <div class="title">Do the dishes</div>
+                        <div class="dropdown"><input type="checkbox" name="complete-1" id=""></div>
+                        <div class="other-info">
+                            <div class="due-date">23/6/24</div>
+                            <div class="priority">High</div>
+                        </div>
+                    </div>
+                    <div class="expansion">
+                        <div class="desc-heading">
+                            Description
+                        </div>
+                        <div class="description">
+                            This task is stupid
+                        </div>
+                        <div class="desc-heading">
+                            Checklist
+                        </div>
+                        <div class="check-list">
+                            <ul class="checks">
+                                <li>
+                                    <input type="checkbox" name="task1" id="task1">
+                                    <label for="task1">What are we doing today</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="openDialogBtn">Open Dialog</button>
+    <dialog id="myDialog">
+        <form method="dialog" class="dialog-form" id="dialog-form">
+            <div class="box">
+                <div class="dialog">
+                    <div class="heading-1">Add To-Do</div>
+                    <label for="title-input" class="dialog-label">Title</label>
+                    <input type="text" name="title-input" id="title-input">
+                    <label for="desc-input" class="dialog-label">Description</label>
+                    <textarea name="desc-input" id="desc-input"></textarea>
+                    <label for="date-input" class="dialog-label">Due Date</label>
+                    <input type="date" name="date-input" id="date-input">
+                    <label for="prio-input" class="dialog-label">Priority</label>
+                    <div>
+                        <input type="radio" name="priority" id="prio-high" class="prio-radio" checked>
+                        <label for="priority">Urgent</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="priority" id="prio-medium" class="prio-radio">
+                        <label for="priority">High</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="priority" id="prio-low" class="prio-radio">
+                        <label for="priority">Low</label>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" id="closeDialogBtn" class="close-button">Add</button>
+                </div>
+            </div>
+        </form>
+        
+    </dialog>
+    
+</body>
+</html>
